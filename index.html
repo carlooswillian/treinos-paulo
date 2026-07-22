@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treino A Bordo - Foco Superiores</title>
+    <title>Treino A B C - A Bordo</title>
     <style>
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
-            --accent-blue: #3b82f6;
-            --accent-cyan: #06b6d4;
+            --accent-blue: #38bdf8;
+            --accent-emerald: #10b981;
             --text-color: #f8fafc;
             --text-muted: #94a3b8;
         }
@@ -28,12 +28,12 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            background: linear-gradient(135deg, #1e3a8a, #0284c7);
             padding: 24px 16px;
             text-align: center;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
         }
 
         header h1 {
@@ -58,21 +58,21 @@
             background-color: var(--card-bg);
             color: var(--text-muted);
             border: 2px solid transparent;
-            padding: 12px 28px;
+            padding: 12px 24px;
             border-radius: 12px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: all 0.3s ease;
             flex: 1;
-            max-width: 120px;
+            max-width: 140px;
             text-align: center;
         }
 
         .tab-btn.active {
             color: #fff;
             border-color: var(--accent-blue);
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(16, 185, 129, 0.2));
         }
 
         .content {
@@ -95,7 +95,7 @@
 
         .workout-header h2 {
             font-size: 1.25rem;
-            color: var(--accent-cyan);
+            color: var(--accent-blue);
         }
 
         .workout-header p {
@@ -126,8 +126,8 @@
         }
 
         .badge {
-            background-color: rgba(59, 130, 246, 0.15);
-            color: var(--accent-cyan);
+            background-color: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
             padding: 4px 10px;
             border-radius: 20px;
             font-size: 0.75rem;
@@ -161,21 +161,22 @@
             padding-left: 10px;
         }
 
-        .note {
-            background-color: rgba(234, 179, 8, 0.1);
-            color: #fde047;
+        .safety-note {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: #34d399;
             padding: 8px 12px;
             border-radius: 8px;
             font-size: 0.8rem;
             margin-top: 10px;
+            border-left: 3px solid var(--accent-emerald);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Treino Personalizado A Bordo</h1>
-        <p>Foco em Membros Superiores & Treino Prático</p>
+        <h1>Treino Personalizado A bordo</h1>
+        <p>Foco em Superiores, Segurança e Articulações Protegidas</p>
     </header>
 
     <div class="nav-container">
@@ -189,22 +190,23 @@
         <!-- TREINO A -->
         <div id="treino-a" class="workout-section active">
             <div class="workout-header">
-                <h2>TREINO A: Peito, Tríceps & Ombro (Empurrar)</h2>
-                <p>Fortalecimento articular e hipertrofia com carga livre</p>
+                <h2>TREINO A: Peito, Ombros & Tríceps</h2>
+                <p>Membros superiores - Foco em empurrar (com total apoio e segurança)</p>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">1. Supino Reto com Halteres</div>
+                <div class="exercise-title">1. Supino Reto com Halteres (no Banco)</div>
                 <div class="exercise-badges">
-                    <span class="badge">4 Séries</span>
+                    <span class="badge">3 Séries</span>
                     <span class="badge">10 a 12 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="a1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Supino com Halteres">
+                    <img src="a1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Supino Reto Halteres">
                 </div>
                 <div class="exercise-instructions">
-                    Deitado no banco reto. Mantenha os ombros firmes e empurre os halteres para cima de forma controlada.
+                    Deite completamente com a coluna apoiada no banco. Mantenha os pés firmes no chão ou sobre o banco se sentir mais estabilidade.
                 </div>
+                <div class="safety-note">🛡️ Proteção: Costas apoiadas no banco eliminam qualquer sobrecarga na lombar.</div>
             </div>
 
             <div class="exercise-card">
@@ -214,52 +216,53 @@
                     <span class="badge">10 a 12 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="a2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Supino Inclinado">
+                    <img src="a2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Supino Inclinado Halteres">
                 </div>
                 <div class="exercise-instructions">
-                    Ajuste o banco em ângulo moderado (30° a 45°). Trabalha a porção superior do peito e ombros.
+                    Ajuste o banco em inclinação leve (30° a 45°). Empurre os halteres para cima de forma controlada.
                 </div>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">3. Elevação Lateral com Halteres</div>
+                <div class="exercise-title">3. Elevação Lateral Sentado</div>
                 <div class="exercise-badges">
-                    <span class="badge">4 Séries</span>
-                    <span class="badge">12 a 15 Reps</span>
-                </div>
-                <div class="exercise-media">
-                    <img src="a3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80';" alt="Elevação Lateral">
-                </div>
-                <div class="exercise-instructions">
-                    Suba os halteres lateralmente até a altura dos ombros. Mantenha o movimento limpo, sem dar impulsos com o corpo.
-                </div>
-            </div>
-
-            <div class="exercise-card">
-                <div class="exercise-title">4. Tríceps Corda ou Barra na Polia</div>
-                <div class="exercise-badges">
-                    <span class="badge">4 Séries</span>
+                    <span class="badge">3 Séries</span>
                     <span class="badge">12 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="a4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Tríceps Polia">
+                    <img src="d3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Elevação Lateral Sentado">
                 </div>
                 <div class="exercise-instructions">
-                    Mantenha os cotovelos fixos ao lado do tronco e estenda os braços completamente para baixo.
+                    Sempre faça este exercício SENTADO com as costas bem encostadas no banco. Eleve os braços até a altura dos ombros.
+                </div>
+                <div class="safety-note">🛡️ Proteção: Fazer sentado impede o balanço do tronco, protegendo a lombar.</div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">4. Tríceps Pulley na Polia (Corda ou Barra)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="d5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Triceps Polia">
+                </div>
+                <div class="exercise-instructions">
+                    Mantenha o corpo firme, cotovelos travados ao lado do tronco e estenda o braço para baixo.
                 </div>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">5. Tríceps Teste com Halteres (ou Banco)</div>
+                <div class="exercise-title">5. Tríceps Francês na Polia Alta</div>
                 <div class="exercise-badges">
                     <span class="badge">3 Séries</span>
-                    <span class="badge">10 a 12 Reps</span>
+                    <span class="badge">12 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="a5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Tríceps Halter">
+                    <img src="a5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Triceps Frances Polia">
                 </div>
                 <div class="exercise-instructions">
-                    Deitado no banco, flexione apenas os cotovelos trazendo os halteres na direção da testa e estenda suavemente.
+                    De costas para a polia, faça a extensão dos cotovelos para a frente sem forçar as articulações.
                 </div>
             </div>
         </div>
@@ -267,155 +270,159 @@
         <!-- TREINO B -->
         <div id="treino-b" class="workout-section">
             <div class="workout-header">
-                <h2>TREINO B: Costas, Bíceps & Postura (Puxar)</h2>
-                <p>Fortalecimento dorsal e prevenção de dores na coluna</p>
+                <h2>TREINO B: Costas & Bíceps</h2>
+                <p>Membros superiores - Foco em puxar (postura e alinhamento)</p>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">1. Puxada Alta na Polia</div>
+                <div class="exercise-title">1. Puxada Alta Frente (na Polia/Aparelho)</div>
                 <div class="exercise-badges">
-                    <span class="badge">4 Séries</span>
+                    <span class="badge">3 Séries</span>
                     <span class="badge">10 a 12 Reps</span>
                 </div>
                 <div class="exercise-media">
                     <img src="b1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Puxada Alta">
                 </div>
                 <div class="exercise-instructions">
-                    Puxe a barra em direção ao peito, apertando as costas na descida. Evite inclinar o corpo excessivamente para trás.
+                    Ajuste o apoio das pernas na máquina. Puxe a barra em direção à parte superior do peito, mantendo o tronco levemente inclinado para trás.
                 </div>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">2. Remada Curvada com Halteres (ou Remada Serrote)</div>
-                <div class="exercise-badges">
-                    <span class="badge">4 Séries</span>
-                    <span class="badge">10 a 12 Reps</span>
-                </div>
-                <div class="exercise-media">
-                    <img src="b2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Remada Serrote">
-                </div>
-                <div class="exercise-instructions">
-                    Apoie um joelho e mão no banco. Puxe o halter em direção ao quadril, mantendo a coluna reta e firme.
-                </div>
-            </div>
-
-            <div class="exercise-card">
-                <div class="exercise-title">3. Crucifixo Invertido com Halteres</div>
-                <div class="exercise-badges">
-                    <span class="badge">3 Séries</span>
-                    <span class="badge">12 a 15 Reps</span>
-                </div>
-                <div class="exercise-media">
-                    <img src="b3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80';" alt="Crucifixo Invertido">
-                </div>
-                <div class="exercise-instructions">
-                    Incline o tronco à frente e abra os braços para os lados. Fundamental para a saúde do manguito e postura dos ombros.
-                </div>
-            </div>
-
-            <div class="exercise-card">
-                <div class="exercise-title">4. Rosca Direta com Halteres (Sentado ou Em Pé)</div>
-                <div class="exercise-badges">
-                    <span class="badge">3 Séries</span>
-                    <span class="badge">10 a 12 Reps</span>
-                </div>
-                <div class="exercise-media">
-                    <img src="b4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Rosca Direta">
-                </div>
-                <div class="exercise-instructions">
-                    Flexione os braços mantendo a postura ereta e sem balançar o quadril.
-                </div>
-            </div>
-
-            <div class="exercise-card">
-                <div class="exercise-title">5. Rosca Martelo com Halteres</div>
+                <div class="exercise-title">2. Remada Baixa Sentado (Triângulo)</div>
                 <div class="exercise-badges">
                     <span class="badge">3 Séries</span>
                     <span class="badge">12 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="b5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Rosca Martelo">
+                    <img src="b3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Remada Baixa">
                 </div>
                 <div class="exercise-instructions">
-                    Pegada neutra (palmas viradas uma para a outra). Trabalha braquial e antebraço, reforçando a pegada.
+                    Sentado na polia baixa, mantenha os joelhos levemente flexionados. Puxe em direção ao umbigo mantendo a coluna ereta.
                 </div>
+                <div class="safety-note">🛡️ Proteção: Não dobre ou incline a coluna para frente e para trás. Mantenha-a estável.</div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">3. Remada Unilateral com Halter (Serrote)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">10 a 12 Reps / lado</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Remada Unilateral">
+                </div>
+                <div class="exercise-instructions">
+                    Apoie um joelho e uma mão no banco. Puxe o halter no sentido do quadril, mantendo a coluna totalmente reta.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">4. Rosca Direta na Polia Baixa</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Rosca Direta Polia">
+                </div>
+                <div class="exercise-instructions">
+                    Use a barra reta ou W na polia baixa. Puxe a carga dobrando os cotovelos sem movimentar o tronco.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">5. Rosca Martelo Sentado com Halteres</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Rosca Martelo Sentado">
+                </div>
+                <div class="exercise-instructions">
+                    Sentado com as costas no encosto do banco, segure os halteres com as palmas voltadas para dentro.
+                </div>
+                <div class="safety-note">🛡️ Proteção: Fazer sentado evita compensação e esforço involuntário no abdômen e lombar.</div>
             </div>
         </div>
 
         <!-- TREINO C -->
         <div id="treino-c" class="workout-section">
             <div class="workout-header">
-                <h2>TREINO C: Pernas Básicas, Ombro Desenvol. & Core</h2>
-                <p>Manutenção de membros inferiores sem sobrecarregar joelhos e coluna</p>
+                <h2>TREINO C: Pernas Básico & Panturrilhas</h2>
+                <p>Treino simples e sem máquinas, foco em funcionalidade leve</p>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">1. Agachamento Livre (Peso do Corpo ou Halter Leve)</div>
+                <div class="exercise-title">1. Senta e Levanta do Banco (Agachamento Guiado)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="a3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Senta e Levanta">
+                </div>
+                <div class="exercise-instructions">
+                    Fique em pé na frente de um banco firme. Incline o quadril para trás e sente com controle. Assim que encostar, levante empurrando pelos calcanhares.
+                </div>
+                <div class="safety-note">🛡️ Proteção: O banco limita a descida e protege joelhos e lombar de sobrecargas. Pode ser feito sem peso ou com um halter leve no peito.</div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">2. Elevação Pélvica deitado no Colchonete</div>
                 <div class="exercise-badges">
                     <span class="badge">3 Séries</span>
                     <span class="badge">12 a 15 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="c1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&q=80';" alt="Agachamento Livre">
+                    <img src="a1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&q=80';" alt="Elevação Pélvica Solo">
                 </div>
                 <div class="exercise-instructions">
-                    Agache como se fosse sentar em uma cadeira, mantendo o calcanhar firme no chão e o peito aberto.
+                    Deitado de costas no colchonete, joelhos dobrados e pés no chão. Eleve o quadril até alinhar com as coxas e aperte o glúteo.
                 </div>
+                <div class="safety-note">🛡️ Proteção: Zero pressão na coluna. Fortalece glúteos e posterior sem exigir do abdômen.</div>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">2. Elevação Pélvica / Ponte no Solo</div>
+                <div class="exercise-title">3. Flexão de Joelhos em Pé na Polia</div>
                 <div class="exercise-badges">
                     <span class="badge">3 Séries</span>
-                    <span class="badge">15 Reps</span>
+                    <span class="badge">12 Reps / lado</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="c2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&q=80';" alt="Ponte Glúteos">
+                    <img src="c4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80';" alt="Flexão Joelhos Polia">
                 </div>
                 <div class="exercise-instructions">
-                    Deitado de costas, eleve o quadril contraindo os glúteos e a parte posterior das coxas. Muito seguro para a lombar.
+                    Com a tornozeleira presa na polia baixa (ou usando uma caneleira leve), dobre o joelho trazendo o calcanhar em direção ao glúteo.
                 </div>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">3. Desenvolvimento de Ombros com Halteres (Sentado)</div>
-                <div class="exercise-badges">
-                    <span class="badge">4 Séries</span>
-                    <span class="badge">10 a 12 Reps</span>
-                </div>
-                <div class="exercise-media">
-                    <img src="c3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Desenvolvimento Halteres">
-                </div>
-                <div class="exercise-instructions">
-                    Sentado com apoio nas costas, empurre os halteres para cima acima da cabeça de forma controlada.
-                </div>
-            </div>
-
-            <div class="exercise-card">
-                <div class="exercise-title">4. Panturrilha em Pé (Com Peso do Corpo)</div>
+                <div class="exercise-title">4. Panturrilha em Pé (na Parede ou Degrau)</div>
                 <div class="exercise-badges">
                     <span class="badge">4 Séries</span>
                     <span class="badge">15 a 20 Reps</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="c4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Panturrilha em Pé">
+                    <img src="c5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Panturrilha em Pe">
                 </div>
                 <div class="exercise-instructions">
-                    Suba na ponta dos pés, segure 1 segundo no topo e desça devagar. Pode apoiar as mãos na parede para equilíbrio.
+                    Apoie as mãos na parede para equilíbrio. Suba nas pontas dos pés o máximo que puder e desça suavemente.
                 </div>
             </div>
 
             <div class="exercise-card">
-                <div class="exercise-title">5. Prancha Frontal (Sustentação do Core)</div>
+                <div class="exercise-title">🚶‍♂️ Cardio Leve: Caminhada A bordo</div>
                 <div class="exercise-badges">
-                    <span class="badge">3 Séries</span>
-                    <span class="badge">30 a 40 seg</span>
+                    <span class="badge">15 a 20 min</span>
+                    <span class="badge">Ritmo Moderado</span>
                 </div>
                 <div class="exercise-media">
-                    <img src="c5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80';" alt="Prancha Frontal">
+                    <img src="e5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=500&q=80';" alt="Caminhada Esteira">
                 </div>
                 <div class="exercise-instructions">
-                    Apoie os antebraços e pontas dos pés no colchonete. Mantenha o corpo alinhado e abdômen firme.
+                    Caminhada na esteira (sem inclinação excessiva) para estímulo cardiovascular leve e lubrificação articular.
                 </div>
             </div>
         </div>
