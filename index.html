@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino A Bordo - Foco Superiores</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding-bottom: 40px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            padding: 24px 16px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+        }
+
+        .tab-btn {
+            background-color: var(--card-bg);
+            color: var(--text-muted);
+            border: 2px solid transparent;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            max-width: 120px;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            color: #fff;
+            border-color: var(--accent-blue);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));
+        }
+
+        .content {
+            padding: 0 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .workout-section {
+            display: none;
+        }
+
+        .workout-section.active {
+            display: block;
+        }
+
+        .workout-header {
+            margin: 12px 0 20px;
+        }
+
+        .workout-header h2 {
+            font-size: 1.25rem;
+            color: var(--accent-cyan);
+        }
+
+        .workout-header p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .exercise-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .exercise-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .exercise-badges {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            background-color: rgba(59, 130, 246, 0.15);
+            color: var(--accent-cyan);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .exercise-media {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #0f172a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .exercise-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .exercise-instructions {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 10px;
+        }
+
+        .note {
+            background-color: rgba(234, 179, 8, 0.1);
+            color: #fde047;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Treino Personalizado A Bordo</h1>
+        <p>Foco em Membros Superiores & Treino Prático</p>
+    </header>
+
+    <div class="nav-container">
+        <button class="tab-btn active" onclick="openTab('treino-a', event)">Treino A</button>
+        <button class="tab-btn" onclick="openTab('treino-b', event)">Treino B</button>
+        <button class="tab-btn" onclick="openTab('treino-c', event)">Treino C</button>
+    </div>
+
+    <div class="content">
+
+        <!-- TREINO A -->
+        <div id="treino-a" class="workout-section active">
+            <div class="workout-header">
+                <h2>TREINO A: Peito, Tríceps & Ombro (Empurrar)</h2>
+                <p>Fortalecimento articular e hipertrofia com carga livre</p>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">1. Supino Reto com Halteres</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="a1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Supino com Halteres">
+                </div>
+                <div class="exercise-instructions">
+                    Deitado no banco reto. Mantenha os ombros firmes e empurre os halteres para cima de forma controlada.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">2. Supino Inclinado com Halteres</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="a2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Supino Inclinado">
+                </div>
+                <div class="exercise-instructions">
+                    Ajuste o banco em ângulo moderado (30° a 45°). Trabalha a porção superior do peito e ombros.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">3. Elevação Lateral com Halteres</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">12 a 15 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="a3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80';" alt="Elevação Lateral">
+                </div>
+                <div class="exercise-instructions">
+                    Suba os halteres lateralmente até a altura dos ombros. Mantenha o movimento limpo, sem dar impulsos com o corpo.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">4. Tríceps Corda ou Barra na Polia</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="a4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Tríceps Polia">
+                </div>
+                <div class="exercise-instructions">
+                    Mantenha os cotovelos fixos ao lado do tronco e estenda os braços completamente para baixo.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">5. Tríceps Teste com Halteres (ou Banco)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="a5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Tríceps Halter">
+                </div>
+                <div class="exercise-instructions">
+                    Deitado no banco, flexione apenas os cotovelos trazendo os halteres na direção da testa e estenda suavemente.
+                </div>
+            </div>
+        </div>
+
+        <!-- TREINO B -->
+        <div id="treino-b" class="workout-section">
+            <div class="workout-header">
+                <h2>TREINO B: Costas, Bíceps & Postura (Puxar)</h2>
+                <p>Fortalecimento dorsal e prevenção de dores na coluna</p>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">1. Puxada Alta na Polia</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Puxada Alta">
+                </div>
+                <div class="exercise-instructions">
+                    Puxe a barra em direção ao peito, apertando as costas na descida. Evite inclinar o corpo excessivamente para trás.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">2. Remada Curvada com Halteres (ou Remada Serrote)</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Remada Serrote">
+                </div>
+                <div class="exercise-instructions">
+                    Apoie um joelho e mão no banco. Puxe o halter em direção ao quadril, mantendo a coluna reta e firme.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">3. Crucifixo Invertido com Halteres</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">12 a 15 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80';" alt="Crucifixo Invertido">
+                </div>
+                <div class="exercise-instructions">
+                    Incline o tronco à frente e abra os braços para os lados. Fundamental para a saúde do manguito e postura dos ombros.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">4. Rosca Direta com Halteres (Sentado ou Em Pé)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Rosca Direta">
+                </div>
+                <div class="exercise-instructions">
+                    Flexione os braços mantendo a postura ereta e sem balançar o quadril.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">5. Rosca Martelo com Halteres</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="b5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80';" alt="Rosca Martelo">
+                </div>
+                <div class="exercise-instructions">
+                    Pegada neutra (palmas viradas uma para a outra). Trabalha braquial e antebraço, reforçando a pegada.
+                </div>
+            </div>
+        </div>
+
+        <!-- TREINO C -->
+        <div id="treino-c" class="workout-section">
+            <div class="workout-header">
+                <h2>TREINO C: Pernas Básicas, Ombro Desenvol. & Core</h2>
+                <p>Manutenção de membros inferiores sem sobrecarregar joelhos e coluna</p>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">1. Agachamento Livre (Peso do Corpo ou Halter Leve)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">12 a 15 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="c1.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=500&q=80';" alt="Agachamento Livre">
+                </div>
+                <div class="exercise-instructions">
+                    Agache como se fosse sentar em uma cadeira, mantendo o calcanhar firme no chão e o peito aberto.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">2. Elevação Pélvica / Ponte no Solo</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">15 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="c2.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&q=80';" alt="Ponte Glúteos">
+                </div>
+                <div class="exercise-instructions">
+                    Deitado de costas, eleve o quadril contraindo os glúteos e a parte posterior das coxas. Muito seguro para a lombar.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">3. Desenvolvimento de Ombros com Halteres (Sentado)</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">10 a 12 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="c3.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Desenvolvimento Halteres">
+                </div>
+                <div class="exercise-instructions">
+                    Sentado com apoio nas costas, empurre os halteres para cima acima da cabeça de forma controlada.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">4. Panturrilha em Pé (Com Peso do Corpo)</div>
+                <div class="exercise-badges">
+                    <span class="badge">4 Séries</span>
+                    <span class="badge">15 a 20 Reps</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="c4.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=500&q=80';" alt="Panturrilha em Pé">
+                </div>
+                <div class="exercise-instructions">
+                    Suba na ponta dos pés, segure 1 segundo no topo e desça devagar. Pode apoiar as mãos na parede para equilíbrio.
+                </div>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-title">5. Prancha Frontal (Sustentação do Core)</div>
+                <div class="exercise-badges">
+                    <span class="badge">3 Séries</span>
+                    <span class="badge">30 a 40 seg</span>
+                </div>
+                <div class="exercise-media">
+                    <img src="c5.gif" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80';" alt="Prancha Frontal">
+                </div>
+                <div class="exercise-instructions">
+                    Apoie os antebraços e pontas dos pés no colchonete. Mantenha o corpo alinhado e abdômen firme.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(tabId, event) {
+            const sections = document.querySelectorAll('.workout-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
